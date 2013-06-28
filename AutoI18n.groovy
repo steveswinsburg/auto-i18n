@@ -95,6 +95,7 @@ class Autoi18n {
 			println("Translating to: " + lang);
 			
 			PropertiesConfiguration translation = translate(baseProps, lang);
+			translation.setEncoding("UTF-8");
 			
 			String newFile = createOutputFilePath(lang);
 			
