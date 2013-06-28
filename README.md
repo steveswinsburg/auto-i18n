@@ -14,7 +14,7 @@ this simple app.
 ### Getting started:
 
 
-* Configure the languages to translate to (and other settings) via config.properties
+* Configure the languages to translate to (and other optional settings) via config.properties
 * Then run via:
   `groovy AutoI18n.groovy <properties_file>`
 
