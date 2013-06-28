@@ -21,6 +21,7 @@ this simple app.
 * For example:
   `groovy AutoI18n.groovy my.properties`
 
+The translated files will be in the out/ directory.
 
 #### Note:
 
