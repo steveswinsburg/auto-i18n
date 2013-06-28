@@ -98,8 +98,10 @@ class Autoi18n {
 			
 			String newFile = createOutputFilePath(lang);
 			
+			println("Writing to: " + newFile);
+			
 			if(writeProps(translation, newFile)) {
-				println("Finished: " + newFile);
+				println("Finished.");
 			}
 		}
 		
@@ -175,9 +177,12 @@ class Autoi18n {
 		
 		String outputDir = config.getString("output.dir");
 		
+		//strip any leading directory
+		String trimmed = StringUtils.substringAfterLast(basePropsFile, File.separator);
+		
 		//replace the .properties with _lang.properties
 		//ensures it is at the end
-		String trimmed = StringUtils.removeEnd(basePropsFile, ".properties");
+		trimmed = StringUtils.removeEnd(trimmed, ".properties");
 		return outputDir + trimmed + "_" + lang + ".properties";
 	
 	}
